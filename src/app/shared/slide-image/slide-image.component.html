@@ -1,0 +1,20 @@
+<swiper-container [loop]="true" [spaceBetween]="2" [breakpoints]="{
+    '0': { 'slidesPerView': 1.2 },
+    '480': { 'slidesPerView': 2 },
+    '768': { 'slidesPerView': 3 },
+    '1024': { 'slidesPerView': 5 }
+  }">
+  <swiper-slide *ngFor="let slide of listaSlides">
+    <div class="conteudos">
+      <ion-card class="card-imagem">
+        <div>
+          <img [src]="slide.imagem ? slide.imagem : ''">
+          <div class="card-texto">
+            <span class="texto-pequeno">{{slide.subTexto ? slide.subTexto : '' }}</span>
+            <h2>{{slide.nome ? slide.nome.toUpperCase() : '' }}</h2>
+          </div>
+        </div>
+      </ion-card>
+    </div>
+  </swiper-slide>
+</swiper-container>

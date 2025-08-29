@@ -1,2 +1,9 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root.ios {
+  --ion-background-color: black;
+}
+
+/* This sets a different background and item background for the default theme on md */
+:root.md {
+  --ion-background-color: black;
+
+}

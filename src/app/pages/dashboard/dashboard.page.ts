@@ -20,7 +20,7 @@ export class DashboardPage implements OnInit {
   ngOnInit() {
 
     this.clienteId = Number(this.route.snapshot.paramMap.get('id'));
-    console.log(this.clienteId);
+
     if (!this.clienteId) {
       this.cliente = this._clienteMock.getClientePorId(1);
       return;
